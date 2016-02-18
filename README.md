@@ -195,6 +195,24 @@ Mojo-Webqq v1.7.0 [![Build Status](https://travis-ci.org/sjdy521/Mojo-Webqq.svg?
 * [QQ群](http://jq.qq.com/?_wv=1027&k=kjVJzo)
 * [IRC](http://irc.perfi.wang/?channel=#Mojo-Webqq)
 
+
+###SailfishOS安装方法
+```
+pkcon install openssl-devel gcc
+pkcon install make
+pkcon install perl-CPAN perl-libwww-perl openssl-perl openssl
+pkcon install perl-Time-Piece
+pkcon remove busybox-symlinks-gzip
+pkcon install gzip
+
+cpan -i App::cpanminus  // curl -kL http:cpanmin.us | perl - App::cpanminus
+sudo cpan -i Compress::Raw::Zlib
+
+pkcon install libyaml-devel
+cpanm -v Mojo::IRC::Server::Chinese
+
+```
+
 ###COPYRIGHT 和 LICENCE
 
 Copyright (C) 2014 by sjdy521
